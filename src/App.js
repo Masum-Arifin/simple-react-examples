@@ -24,16 +24,20 @@ function LoadCountries(){
       <h1>Visiting Every country of the world!!</h1>
       <h3>Available Countries: {countries.length}</h3>
       {
-        countries.map(country => <country name={country.name.common}></country>)
+        countries.map(country => <Country name={country.name.common} population={country.population} region={country.region} time={country.timezones}></Country>)
       }
     </div>
   )
 }
 
-function Country (props) {
+function Country(props) {
   return(
     <div>
       <h2>Name: {props.name}</h2>
+     <h4>Region: {props.region}</h4>
+     <h4>Population: {props.population}</h4>
+     <h4>Time: {props.timezones}</h4>
+     <h4>Postal: {props.postalCode}</h4>
     </div>
   )
 }
